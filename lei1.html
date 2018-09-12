@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let aaa="stroke";
+    let bbb="method";
+    class Person{
+        constructor(name,age){
+           this.name=name;
+           this.age=age;
+        }
+        showName(){
+            return  `${this.name}`;
+        }
+        showAge(){
+            return `${this.age}`;
+        }
+        [aaa+bbb](){
+            return "返回aaa";
+        }
+    }
+    let p1=new Person("andy",12);
+    console.log(p1.showName());
+    console.log(p1.showAge());
+    console.log(p1[aaa+bbb]());
+</script>
+</body>
+</html>

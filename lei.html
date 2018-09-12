@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function Person(name,age) {
+            this.name=name;
+            this.age=age;
+        }
+       /* Person.prototype.showName=function () {
+            return `${this.name}`;
+           /!* return this.age;*!/
+        }*/
+       Object.assign(Person.prototype,{
+           showName(){
+               return "名字是"+this.name;
+           },
+           showAge(){
+               return `年龄是:${this.age}`
+           }
+       })
+        let p1=new Person("lose",12);
+        console.log(p1.showName(),p1.showAge());
+    </script>
+</body>
+</html>
